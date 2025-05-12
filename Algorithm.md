@@ -9,7 +9,7 @@ Sort Books	            By Title, Author, Date (both orders)
 Search Books      	    By Title, Author, Find Newest, Find Oldest
 Exit	                End the program
   
-       -//-
+     
 # Pseudocode 
 
 Start
@@ -73,7 +73,7 @@ repeat:
 until choice is Exit
 
 End
-     -//-
+    
 
 # Menu Display Example
 
@@ -97,7 +97,8 @@ End
 6. Exit Program
 
 Enter your choice: 
-         -//-
+       
+       
 
 # Simple Flowchart
 +-----------------+
