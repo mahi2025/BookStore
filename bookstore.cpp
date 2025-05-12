@@ -16,7 +16,6 @@ int main() {
     // array list 
 
     cout << "Welcome to BookStore System" << endl;
-    // Display menu
     cout << "1. View All Books" << endl;
     cout << "2. Insert a New Book" << endl;
     cout << "3. Delete a Book (by Title)" << endl;
@@ -31,7 +30,7 @@ int main() {
     cout << "   c. Find Newest Book" << endl;
     cout << "   d. Find Oldest Book" << endl;
     cout << "Exit program" << endl;
-    // Get user's choice
+    
     int choice;
     cin >> choice;
 
