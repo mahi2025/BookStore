@@ -1,6 +1,13 @@
-# Sample books 
-features:
-    Title
-    Author
-    Date of publication
-    It's first letter of Title and Author
+The Alchemist|Paulo Coelho|1988
+
+Atomic Habits|James Clear|2018
+
+Hamlet|William Shakespeare|1603 
+
+Pride and Prejudice|Jane Austen|1813 
+
+Why Not You?|Valorie Burton|2014
+
+A Tale of Two Cities|Charles Dickens|1859  
+
+
