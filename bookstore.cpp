@@ -24,7 +24,7 @@ void saveBooksToFile(const vector<bookStructure>& books) {
     }
     file.close();
 }
-    void loadBooksFromFile(vector<bookStructure>& books) {
+void loadBooksFromFile(vector<bookStructure>& books) {
     ifstream file("sampleBooks.txt");
     if (!file.is_open()) {
         cout << "No existing books file found." << endl;
@@ -142,7 +142,7 @@ int main() {
 
     while (run) {
         // Clear screen before showing menu
-        system("cls");  // for Windows
+        system("cls");  
        
         cout << "\n=== Welcome to BookStore System ===" << endl;
         cout << "1. View All Books" << endl;
@@ -153,7 +153,7 @@ int main() {
         cout << "6. Exit program" << endl;
         cout << "\nEnter your choice (1-6): ";
         
-        // Better input handling
+        
         string input;
         getline(cin, input);
         
@@ -243,8 +243,7 @@ int main() {
                     cin.get();
                     break;
                 }
-
-                cout << "\nChoose sorting option:" << endl;
+                cout << "\nChoose sorting option: " << endl;
                 cout << "a. By Title (A-Z)" << endl;
                 cout << "b. By Author (A-Z)" << endl;
                 cout << "c. By Date (Oldest to Newest)" << endl;
