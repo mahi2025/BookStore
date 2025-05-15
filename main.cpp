@@ -27,7 +27,7 @@ int main() {
         try {
             choice = stoi(input);
         } catch (...) {
-            cout << "Invalid input! Please enter a number between 1 and 6." << endl;
+            cout << "Invalid input! Please enter a number between (1-6)." << endl;
             cout << "Press Enter to continue...";
             cin.get();
             continue;
@@ -43,7 +43,7 @@ int main() {
                     for (const auto& book : books) {
                         cout << "Title: " << book.title << endl;
                         cout << "Author: " << book.author << endl;
-                        cout << "Publication Year: " << book.date_of_publication << endl;
+                        cout << "Publication Year: " << book.year_of_publication << endl;
                         cout << "-----------------" << endl;
                     }
                 }
@@ -62,7 +62,7 @@ int main() {
                 string year;
                 getline(cin, year);
                 try {
-                    newBook.date_of_publication = stoi(year);
+                    newBook.year_of_publication = stoi(year);
                     books.push_back(newBook);
                     saveBooksToFile(books);
                     cout << "Book added successfully!" << endl;
@@ -124,22 +124,18 @@ int main() {
                     case 'a':
                     case 'A':
                         sortByTitle(books);
-                        cout << "Books sorted by title!" << endl;
                         break;
                     case 'b':
                     case 'B':
                         sortByAuthor(books);
-                        cout << "Books sorted by author!" << endl;
                         break;
                     case 'c':
                     case 'C':
-                        sortByDateAsc(books);
-                        cout << "Books sorted by date (oldest to newest)!" << endl;
+                        sortByYearAsc(books);
                         break;
                     case 'd':
                     case 'D':
-                        sortByDateDesc(books);
-                        cout << "Books sorted by date (newest to oldest)!" << endl;
+                        sortByYearDesc(books);
                         break;
                     default:
                         cout << "Invalid sorting option!" << endl;
@@ -153,7 +149,7 @@ int main() {
                 for (const auto& book : books) {
                     cout << "Title: " << book.title << endl;
                     cout << "Author: " << book.author << endl;
-                    cout << "Publication Year: " << book.date_of_publication << endl;
+                    cout << "Publication Year: " << book.year_of_publication << endl;
                     cout << "----------------" << endl;
                 }
                 
@@ -182,10 +178,10 @@ int main() {
                     int index = binarySearchByTitle(books, searchTitle);
                     
                     if (index != -1) {
-                        cout << "\nBook found:" << endl;
+                        cout << "\nThe Book is found:" << endl;
                         cout << "Title: " << books[index].title << endl;
                         cout << "Author: " << books[index].author << endl;
-                        cout << "Publication Year: " << books[index].date_of_publication << endl;
+                        cout << "Publication Year: " << books[index].year_of_publication << endl;
                     } else {
                         cout << "Book not found!" << endl;
                     }
@@ -197,10 +193,10 @@ int main() {
                     int index = linearSearchByAuthor(books, searchAuthor);
                     
                     if (index != -1) {
-                        cout << "\nBook found:" << endl;
+                        cout << "\nThe Book is found:" << endl;
                         cout << "Title: " << books[index].title << endl;
                         cout << "Author: " << books[index].author << endl;
-                        cout << "Publication Year: " << books[index].date_of_publication << endl;
+                        cout << "Publication Year: " << books[index].year_of_publication << endl;
                     } else {
                         cout << "Book not found!" << endl;
                     }
@@ -208,21 +204,21 @@ int main() {
                     if (books.empty()) {
                         cout << "No books available!" << endl;
                     } else {
-                        sortByDateDesc(books);
-                        cout << "\nNewest Book:" << endl;
+                        sortByYearDesc(books);
+                        cout << "\nThe Newest Book:" << endl;
                         cout << "Title: " << books[0].title << endl;
                         cout << "Author: " << books[0].author << endl;
-                        cout << "Publication Year: " << books[0].date_of_publication << endl;
+                        cout << "Publication Year: " << books[0].year_of_publication << endl;
                     }
                 } else if (searchChoice == "d") {
                     if (books.empty()) {
                         cout << "No books available!" << endl;
                     } else {
-                        sortByDateAsc(books);
-                        cout << "\nOldest Book:" << endl;
+                        sortByYearAsc(books);
+                        cout << "\n The Oldest Book:" << endl;
                         cout << "Title: " << books[0].title << endl;
                         cout << "Author: " << books[0].author << endl;
-                        cout << "Publication Year: " << books[0].date_of_publication << endl;
+                        cout << "Publication Year: " << books[0].year_of_publication << endl;
                     }
                 } else {
                     cout << "Invalid search option!" << endl;

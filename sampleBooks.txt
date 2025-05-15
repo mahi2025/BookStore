@@ -1,13 +1,9 @@
 The Alchemist|Paulo Coelho|1988
-
 Atomic Habits|James Clear|2018
-
-Hamlet|William Shakespeare|1603 
-
-Pride and Prejudice|Jane Austen|1813 
-
+Hamlet|William Shakespeare|1603
+Pride and Prejudice|Jane Austen|1813
 Why Not You?|Valorie Burton|2014
-
-A Tale of Two Cities|Charles Dickens|1859  
-
-
+A Tale of Two Cities|Charles Dickens|1859
+Who not How|Dan Sullivan|2020
+Today Matters|John C.Maxwell|2005
+Eat that Frog|Brain Tracy|2017
