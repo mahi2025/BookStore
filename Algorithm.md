@@ -1,4 +1,4 @@
-//Step by Step Algorithm of the code conatin Feature, pseudocode, Menu dispaly, Simple Flow chart
+//Step by Step Algorithm of the code conatin Feature, Algorithms Used, pseudocode, Menu dispaly, Simple Flow chart
 # Features 
 
 Feature	                Action
@@ -9,7 +9,11 @@ Sort Books	            By Title, Author, Date (both orders)
 Search Books      	    By Title, Author, Find Newest, Find Oldest
 Exit	                End the program
   
-     
+
+# Algorithms Used
+Insertion Sort 
+Linear Search
+Binary Search for lists sorted by title 
 # Pseudocode 
 
 Start
@@ -19,7 +23,7 @@ Create a structure Book with:
     - author
     - dateOfPublication
 
-Create a list/array/vector of books
+Create a vector of books
 
 repeat:
     Display Menu:
@@ -96,7 +100,7 @@ End
    d. Find Oldest Book
 6. Exit Program
 
-Enter your choice: 
+Please Enter your choice: 
        
        
 

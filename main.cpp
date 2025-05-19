@@ -92,6 +92,16 @@ int main() {
                             break;
                         }
                     }
+
+                    /*for (size_t i = 0; i < books.size(); ++i) {
+    if (books[i].title == titleToDelete) {
+        books.erase(books.begin() + i);
+        saveBooksToFile(books);
+        found = true;
+        cout << "Book deleted successfully!" << endl;
+        break;
+    }
+}*/
                     
                     if (!found) {
                         cout << "Book not found!" << endl;
