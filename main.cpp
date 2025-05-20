@@ -75,42 +75,34 @@ int main() {
             }
 
             case 3: {
-                if (books.empty()) {
-                    cout << "No books available to delete!" << endl;
-                } else {
-                    string titleToDelete;
-                    cout << "Enter the title of the book to delete: ";
-                    getline(cin, titleToDelete);
-                    
-                    bool found = false;
-                    for (auto it = books.begin(); it != books.end(); ++it) {
-                        if (it->title == titleToDelete) {
-                            books.erase(it);
-                            saveBooksToFile(books);
-                            found = true;
-                            cout << "Book deleted successfully!" << endl;
-                            break;
-                        }
-                    }
-
-                    /*for (size_t i = 0; i < books.size(); ++i) {
-    if (books[i].title == titleToDelete) {
-        books.erase(books.begin() + i);
-        saveBooksToFile(books);
-        found = true;
-        cout << "Book deleted successfully!" << endl;
-        break;
-    }
-}*/
-                    
-                    if (!found) {
-                        cout << "Book not found!" << endl;
+               if (books.empty()) {
+                cout << "No books available to delete!" << endl;
+            } else {
+                string titleToDelete;
+                cout << "Enter the title of the book to delete: ";
+                getline(cin, titleToDelete);
+            
+                bool found = false;
+            
+                for (size_t i = 0; i < books.size(); ++i) {
+                    if (books[i].title == titleToDelete) {
+                        books.erase(books.begin() + i);
+                        saveBooksToFile(books); 
+                        found = true;
+                        cout << "Book deleted successfully!" << endl;
+                        break;
                     }
                 }
-                cout << "\nPress Enter to continue...";
-                cin.get();
-                break;
+            
+                if (!found) {
+                    cout << "Book not found!" << endl;
+                }
             }
+            
+            cout << "\nPress Enter to continue...";
+            cin.get();
+            break;
+        }
 
             case 4: {
                 if (books.empty()) {
